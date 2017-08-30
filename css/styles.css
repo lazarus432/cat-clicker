@@ -6,7 +6,7 @@ body {
 }
 
 div.title-container {
-  width: 100%;
+  width: 55%;
   text-align: center;
 }
 
@@ -19,7 +19,7 @@ ol.buttons {
 div.cat-contain {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 55%;
 }
 
 div.c-name {
@@ -42,4 +42,9 @@ div.click-counter {
   font-variant-caps: small-caps;
   padding-right: 2em;
   text-align: right;
+}
+
+div.admin {
+  width: 45%;
+  text-align: center;
 }
