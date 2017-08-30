@@ -20,7 +20,28 @@
       <div class = "click-counter" id = "cat-count">
       </div>
     </div>
-  <div class = "admin" id = "admin-view"></div>
+  <div class = "admin" id = "admin-container">
+
+    <button type = "button" value = "Admin" id = "admin-btn">Admin</button>
+    <br>
+    <br>
+
+    <form id = "form" action = "index.html" method = "post">
+      Cat Name:
+      <input type = "text" name = "name" value = "" id = "admin-name">
+      <br>
+      <br>
+        Image Source:
+        <input type = "text" name = "imgSrc" value = "" id = "admin-image">
+        <br>
+        <br>
+          Cat Clicks:
+          <input type = "text" name = "clickCount" value = "" id = "admin-clicks">
+          <br>
+          <br>
+
+          <button onclick = "myFunction()">Save</button>
+        </div>
 
 
   <script src = "js/app.js"></script>
