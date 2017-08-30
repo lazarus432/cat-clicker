@@ -151,6 +151,7 @@ var adminView = {
     this.image = document.getElementById('admin-image');
     this.clicks = document.getElementById('admin-clicks');
     this.saveBtn = document.getElementById('admin-save');
+    this.cancelBtn = document.getElementById('admin-cancel');
 
     this.render();
   },
@@ -159,7 +160,6 @@ var adminView = {
   render: function () {
     this.adminForm.style.visibility = 'hidden';
     var form = this.adminForm;
-    var save = this.saveBtn;
 
     this.adminBtn.addEventListener('click', function() {
       var details = octopus.cat_details();
@@ -171,7 +171,23 @@ var adminView = {
 
     });
 
+    this.saveBtn.addEventListener('click', function(name, image, click) {
+      var details = octopus.cat_details();
+      name = adminView.name.value;
+      image = adminView.image.value;
+      click = adminView.clicks.value;
 
+      octopus.save_cat_details(name, image, click);
+
+      list_view.render();
+      display_view.render();
+
+      form.style.visibility = 'hidden';
+    });
+
+    this.cancelBtn.addEventListener('click', function() {
+      form.style.visibility = 'hidden';
+    });
 
   }
 }
