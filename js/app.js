@@ -161,15 +161,15 @@ var adminView = {
     var form = this.adminForm;
     var save = this.saveBtn;
 
-    /*this.adminBtn.addEventListener('click', function() {
+    this.adminBtn.addEventListener('click', function() {
       var details = octopus.cat_details();
 
-      adminForm.style.visibility = 'visible';
+      form.style.visibility = 'visible';
       adminView.name.value = details.name;
-      adminView.image.value = details.image;
-      adminView.clicks.value = details.clicks;
+      adminView.image.value = details.imgSrc;
+      adminView.clicks.value = details.clickCount;
 
-    });*/
+    });
 
 
 
