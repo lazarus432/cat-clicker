@@ -43,6 +43,7 @@ var octopus = {
         // tell our views to initialize
         list_view.init();
         display_view.init();
+        adminView.init();
     },
 
     get_currentCat: function() {
@@ -64,7 +65,7 @@ var octopus = {
         display_view.render();
     },
 
-    // open admin-view
+    // open admin view
     cat_details: function() {
       return model.current_cat;
     },
@@ -139,6 +140,41 @@ var list_view = {
         }
     }
 };
+
+var adminView = {
+
+  init: function() {
+    // store element for later
+    this.adminBtn = document.getElementById('admin-btn');
+    this.adminForm = document.getElementById('form');
+    this.name = document.getElementById('admin-name');
+    this.image = document.getElementById('admin-image');
+    this.clicks = document.getElementById('admin-clicks');
+    this.saveBtn = document.getElementById('admin-save');
+
+    this.render();
+  },
+
+  // hides the admin form
+  render: function () {
+    this.adminForm.style.visibility = 'hidden';
+    var form = this.adminForm;
+    var save = this.saveBtn;
+
+    /*this.adminBtn.addEventListener('click', function() {
+      var details = octopus.cat_details();
+
+      adminForm.style.visibility = 'visible';
+      adminView.name.value = details.name;
+      adminView.image.value = details.image;
+      adminView.clicks.value = details.clicks;
+
+    });*/
+
+
+
+  }
+}
 
 // launch
 octopus.init();
