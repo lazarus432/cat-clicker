@@ -62,7 +62,22 @@ var octopus = {
     inc_counter: function() {
         model.current_cat.clickCount++;
         display_view.render();
+    },
+
+    // open admin-view
+    cat_details: function() {
+      return model.current_cat;
+    },
+
+    // save user input
+    save_cat_details: function(name, image, click) {
+      model.current_cat.name = name;
+      model.current_cat.imgSrc = image;
+      model.current_cat.clickCount = click;
+
+      return model.current_cat;
     }
+
 };
 
 
